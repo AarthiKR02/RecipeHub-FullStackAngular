@@ -1,0 +1,54 @@
+
+  <div class="container-fluid homepage">
+    <div *ngIf="info.token; else loggedOut">
+      <br>
+      <div class="title">
+        <h2 class="display-3" style="font-family: comic sans ms;">Welcome to RecipeHub</h2>
+        <p className="lead fs-4 text-secondary"><b>“Taste, Tradition, and a Touch of Magic!”</b> </p>
+      </div>
+        <br>
+        <br>
+        <br>
+        <div class="row col-12">
+          <div class="col-4 text-center">
+            <app-recipes></app-recipes>
+          </div>
+          
+          <div class="col-8">
+            <app-search-recipe></app-search-recipe>
+            <br>
+            <br>
+            <app-popular></app-popular>
+            <br>
+          </div>
+        </div>
+     </div>
+  </div>
+
+    <ng-template #loggedOut>
+        <div class="container text-center ">
+          <div class="homepage">
+            <br>
+            <br>
+            <h1 style="font-family: comic sans ms;">Welcome to RecipeHub</h1>
+            <p className="lead text-muted">A Recipe Management System</p>
+            <br>
+            <br>
+            <h4 style="font-family: courier new"><b>Please Login :)</b></h4>
+            <br>
+            <div class="row">
+              <div class="col-5"></div>
+              <div class="col-5">
+                <app-login></app-login>
+              </div>
+              <div class="col-2"></div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+    </ng-template>
+ 
